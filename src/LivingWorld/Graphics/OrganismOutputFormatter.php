@@ -10,6 +10,7 @@ class OrganismOutputFormatter
 {
     public function formatOutput(OutputInterface $output)
     {
+        $output->getFormatter()->setStyle(OrganismTypeEnum::TYPE_WEIRD, new OutputFormatterStyle('yellow'));
         $output->getFormatter()->setStyle(OrganismTypeEnum::TYPE_HARKONNEN, new OutputFormatterStyle('red'));
         $output->getFormatter()->setStyle(OrganismTypeEnum::TYPE_ORDOS, new OutputFormatterStyle('green'));
         $output->getFormatter()->setStyle(OrganismTypeEnum::TYPE_ATREIDES, new OutputFormatterStyle('blue'));
